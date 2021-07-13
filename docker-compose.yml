@@ -1,6 +1,8 @@
 # docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend
 # We can create many serivce,
 # This service will look at the Dockerfile.dev and build and configure an image for us
+# This file combine docker command in one 1 file, save us from remember all the command
+# to build and start a container
 version: '3'
 services:
   web: # we can call this whatever we want

@@ -1,4 +1,8 @@
-# Setup Base OS image
+# Docker file for development
+# Setup Base OS image: Our frontend react service
+# A docker file is the instruction on how to create an image for our
+# docker container and with instruction on how to start it from docker
+# Docker file is basicallly and instruction to create an image
 
 FROM node:alpine
 

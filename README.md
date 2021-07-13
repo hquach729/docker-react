@@ -55,3 +55,7 @@ CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS
 # it allow us to send input to our shell
 
 1. docker exec -it 9d4146aeb4ab sh
+
+# Docker file with two phase: Build Phase and Run Phase
+
+# Nginx is use for our production build
