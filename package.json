@@ -16,11 +16,13 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"docker-start": "docker-compose down && docker-compose up --build",
 		"docker-start-dev": "docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend",
+		"docker-test-dev": "docker run -it  -v /app/node_modules -v $(pwd):/app hquach729/frontend npm run test",
 		"docker-build-dev": "docker build -f Dockerfile.dev -t hquach729/frontend:latest .",
+		"docker-build-prod": "",
 		"docker-shell-dev": "docker run -it hquach729/frontend sh",
-		"docker-compose": "docker-compose down && docker-compose up --build"
+		"docker-compose-dev": "docker-compose down && docker-compose up --build",
+		"docker-compose-build": "docker-compose down && docker-compose up --build"
 	},
 	"eslintConfig": {
 		"extends": [

@@ -1,5 +1,6 @@
 # docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend
-
+# We can create many serivce,
+# This service will look at the Dockerfile.dev and build and configure an image for us
 version: '3'
 services:
   web: # we can call this whatever we want
@@ -12,4 +13,12 @@ services:
     volumes:
       - /app/node_modules # don't map this folder from our local file to the container
       - .:/app # current folder outside container to the app folder in the container
-
+  tests: # by default it takes the default cmd in dockerfile and run it
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes: # - represent any array
+      - /app/node_modules # don't map this folder from our local file to the container
+      - .:/app # current folder outside container to the app folder in the container
+    command: ['npm', 'run', 'test']
