@@ -1,0 +1,21 @@
+# Setup Base OS image
+
+FROM node:alpine
+
+# Setup an app directory that has our frontend files and folder 
+WORKDIR '/app'
+
+# Copy our frontend package.json to the WORKDIR
+COPY package.json . 
+
+# Install Dependencies from the copy package.json in the WORKDIR
+RUN npm install
+
+# Copy everything from our project directories
+COPY . .
+
+
+
+# START React App
+CMD [ "npm", "run", "start" ]
+
