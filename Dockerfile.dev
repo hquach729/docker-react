@@ -12,6 +12,8 @@ COPY package.json .
 RUN npm install
 
 # Copy everything from our project directories
+# We don't need to copy file here to our container since we referce are app direction from container back to our local file
+# But is still good to use it
 COPY . .
 
 

@@ -15,7 +15,7 @@ function App() {
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					Learn React: Docker Volume to /app in our container
+					Learn React: Docker and Kubenetes Version 4
 				</a>
 			</header>
 		</div>

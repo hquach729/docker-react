@@ -1,7 +1,15 @@
+# docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend
+
 version: '3'
 services:
-  frontend:
+  web: # we can call this whatever we want
     restart: always
-    build: .
+    build: # build . will not work this time, because we don't have a docker file but a Dockerfile.dev
+      context: . # location of all of src file to be taken into the docker container
+      dockerfile: Dockerfile.dev # location and name of our docker file
     ports:
       - 3000:3000
+    volumes:
+      - /app/node_modules # don't map this folder from our local file to the container
+      - .:/app # current folder outside container to the app folder in the container
+
