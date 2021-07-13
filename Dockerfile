@@ -1,4 +1,4 @@
-# Docker file for Production
+# Docker file for Production, A Bunch of Instruction that tell Docker how to build and run in image in a Container
 # Build Phase of OS image
 # These are the instruction given to the docker to build an image and have it run in a docker container.
 # Think of a container as an individual computer running a particual os and program

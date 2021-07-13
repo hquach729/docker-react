@@ -59,3 +59,20 @@ CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS
 # Docker file with two phase: Build Phase and Run Phase
 
 # Nginx is use for our production build
+
+# git remote show origin
+
+# TRAVIS CLI SETUP
+
+1. Tell travis cli the github repo that we just put together
+
+   1. Tell Travis we need a copy of docker running
+   1. Build our image using Dockerfile.dev Note: on why we use dev and production, the production docker file doesn't have test dependency to run our test suite
+      a. by that what we mean is that the production Dockerfile and launch nginx and has file in our build folder to copy to it
+   1. Tell Travis how to run our test suite
+   1. Tell travis how to deploy our code to AWS
+
+### we need to run this to get it exit out of test
+
+1. docker run -e CI=true hquach729/frontend npm run test -- --coverage
+1. docker run -e CI=true hquach729/frontend npm run test

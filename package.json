@@ -16,6 +16,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
+		"git-push-existing": "git remote add origin https://github.com/hquach729/docker-react.git & git push -u origin master",
 		"docker-start-dev": "docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend",
 		"docker-start-prod": "docker run -p 8080:80 hquach729/frontend",
 		"docker-test-dev": "docker run -it  -v /app/node_modules -v $(pwd):/app hquach729/frontend npm run test",
