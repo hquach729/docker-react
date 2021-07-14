@@ -79,3 +79,14 @@ CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS
 
 access_key_id: $AWS_ACCESS_KEY
 secret_access_key: $AWS_SECRET_KEY
+
+# Typical workflow
+
+1. git checkout -b feature
+2. Change file
+3. git add .
+4. git commit -m 'add new text'
+
+# we push the feature branch to github
+
+4. push push origin feature
