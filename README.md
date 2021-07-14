@@ -76,3 +76,6 @@ CONTAINER ID NAME CPU % MEM USAGE / LIMIT MEM % NET I/O BLOCK I/O PIDS
 
 1. docker run -e CI=true hquach729/frontend npm run test -- --coverage
 1. docker run -e CI=true hquach729/frontend npm run test
+
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_KEY

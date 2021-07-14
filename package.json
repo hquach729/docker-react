@@ -18,10 +18,10 @@
 		"eject": "react-scripts eject",
 		"git-push-existing": "git remote add origin https://github.com/hquach729/docker-react.git & git push -u origin master",
 		"docker-start-dev": "docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app hquach729/frontend",
-		"docker-start-prod": "docker run -p 8080:80 hquach729/frontend",
+		"docker-start-prod": "docker run -p 8080:80 hquach729/frontend-prod",
 		"docker-test-dev": "docker run -it  -v /app/node_modules -v $(pwd):/app hquach729/frontend npm run test",
 		"docker-build-dev": "docker build -f Dockerfile.dev -t hquach729/frontend:latest .",
-		"docker-build-prod": "docker build -t hquach729/frontend .",
+		"docker-build-prod": "docker build -t hquach729/frontend-prod .",
 		"docker-shell-dev": "docker run -it hquach729/frontend sh",
 		"docker-compose-dev": "docker-compose down && docker-compose up --build",
 		"docker-compose-build": "docker-compose down && docker-compose up --build"
