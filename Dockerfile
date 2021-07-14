@@ -25,7 +25,10 @@ COPY . .
 RUN npm run build 
 
 # Takes the build folder in our WORKDIR '/app' and copy it to another container call nginx 
+# We need to EXPOSE so our container can be reach outside
+# EXPOSE only applie to AWS elastic beanstalk, development we only read it
 FROM nginx
+EXPOSE 80
 
 COPY --from=0 /app/build /usr/share/nginx/html
 
